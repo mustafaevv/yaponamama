@@ -1,18 +1,3 @@
-import { FiUser } from "react-icons/fi";
-import { BiShoppingBag, BiSearch } from "react-icons/bi";
-
-export const icons = [
-  {
-    icon: <BiSearch />,
-  },
-  {
-    icon: <FiUser />,
-  },
-  {
-    icon: <BiShoppingBag />,
-  },
-];
-
 export const headerLink = [
   {
     name: "МЕНЮ",

@@ -1,35 +1,35 @@
 const links = [
   {
     name: "О НАС",
-    link: "/category/about",
+    link: "/about",
   },
   {
     name: "МЕНЮ",
-    link: "/category/menu",
+    link: "/menu",
   },
   {
     name: "АКЦИИ",
-    link: "/category/stock",
+    link: "/stock",
   },
   {
     name: "РЕСТОРАНЫ",
-    link: "/category/restaurant",
+    link: "/restaurant",
   },
   {
     name: "ДОСТАВКА",
-    link: "/category/delivery",
+    link: "/delivery",
   },
   {
     name: "ГАЛЕРЕЯ",
-    link: "/category/gallery",
+    link: "/gallery",
   },
   {
     name: "КОНТАКТЫ",
-    link: "/category/contact",
+    link: "/contact",
   },
   {
     name: "ПУБЛИЧНАЯ ОФЕРТА",
-    link: "/category/public",
+    link: "/public",
   },
   {
     name: "ПРАВИЛА ПОСЕЩЕНИЯ РЕСТОРАНА",

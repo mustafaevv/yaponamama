@@ -1,14 +1,23 @@
 .header {
   background: #fff;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   &__container {
     display: flex;
     align-items: center;
     gap: 5em;
   }
 
+  &__item{
+    display: flex;
+    gap: 3em;
+    align-items: center;
+  }
+
   &__logo-img {
-    width: 145px;
+    width: 150px;
     height: 45px;
   }
 
@@ -40,7 +49,8 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 4em;
   }
 
   &__modal {
@@ -48,14 +58,15 @@
     max-width: 500px;
     width: 100%;
     height: 260px;
-    z-index: 20;
-    top: -100%;
+    z-index: 200;
+    top: -500%;
     background: #fff;
+    box-shadow: 0 0 10px #fff;
     transition: all 0.7s;
     right: 38%;
 
     &_active {
-      top: 20%;
+      top: 150%;
       transition: 0.5s;
     }
   }
@@ -106,6 +117,23 @@
     font-size: 30px;
     color: #000;
     cursor: pointer;
+    position: relative;
+  }
+
+  &__counter{
+    background: #e43a3a;
+    position: absolute;
+    border-radius: 100%;
+    height: 16px;
+    min-width: 16px;
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+    padding: 1px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__location {

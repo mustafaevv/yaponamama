@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import Container from "../../layout/Container";
 import navLinkItems from "./navLinkItem";
 
-import classes from "./NavLink.module.scss";
 
 const Section = styled.section`
   position: sticky;
+  top: 7%;
+  z-index: 2;
   background: #fff;
   padding: 30px 0;
   box-shadow: 0 4px 5px rgb(0 0 0 / 10%);

@@ -13,7 +13,7 @@ const Nav = styled.nav`
   background: #e74c4c;
   box-shadow: 0 4px 4px rgb(231 76 76 / 35%);
   border-radius: 4px;
-  margin-bottom: 30px;
+  margin: 50px 0;
 `;
 
 const List = styled.ul`

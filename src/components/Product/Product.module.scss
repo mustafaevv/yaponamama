@@ -1,12 +1,13 @@
 .product {
-  max-width: 337px;
+  max-width: 367px;
   width: 100%;
-  border-radius: 3px;
-  padding: 15px;
-  transition: 0.3s transform;
-  border: 0.1px solid #ececf3;
+  min-height: 580px;
   display: flex;
   flex-direction: column;
+  border-radius: 3px;
+  padding: 15px;
+  transition: 0.1s;
+  border: 0.1px solid #ececf3;
   background: #fff;
 
   &:hover {
@@ -14,13 +15,12 @@
     box-shadow: 0 0 10px silver;
     transition-duration: 0.3s;
     transition-property: transform;
-    z-index: 10;
   }
 
   &__img {
-    width: 285px;
+    width: 100%;
     cursor: pointer;
-    height: 285px;
+    margin-bottom: 1em;
   }
 
   &__name {
@@ -31,7 +31,6 @@
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: 0.4s;
-    // padding-bottom: 10px;
 
     &:hover {
       text-decoration-color: inherit;
@@ -43,7 +42,6 @@
     color: #b3b5c2;
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 1em;
   }
 
   &__item {
@@ -51,6 +49,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: auto;
+
   }
 
   &__price {
@@ -69,5 +68,33 @@
     font-size: 16px;
     padding: 0 25px;
     cursor: pointer;
+    transition: 0.4s background;
+
+    &:hover {
+      background: #c43131;
+    }
+  }
+
+  &__calculator{
+    max-width: 85.38px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__minus,
+  &__plus{
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &__counter{
+    font-size: 20px;
+    font-weight: bold;
   }
 }
