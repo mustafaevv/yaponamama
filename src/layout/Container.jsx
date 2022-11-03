@@ -1,11 +1,12 @@
-import styled from "styled-components";
+import classNames from "classnames";
 
-const Container = styled.div`
-  max-width: 1500px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-`;
+import classes from "./Container.module.scss";
+
+const Container = ({ children, className }) => {
+  return (
+    <div className={classNames(classes["container"], className)}>
+      {children}
+    </div>
+  );
+};
 export default Container;

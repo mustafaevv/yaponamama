@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../../layout/Container";
+import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 
 import navLinkItems from "../NavLink/navLinkItem";
+import Container from "../../layout/Container";
 
 import classes from "./Menu.module.scss";
-import classNames from "classnames";
 
 const Nav = styled.nav`
   padding: 1rem;
@@ -27,6 +27,7 @@ const List = styled.ul`
 
 const Menu = () => {
   const location = useLocation();
+  
   return (
     <Container>
       <Nav>

@@ -49,7 +49,6 @@
     align-items: center;
     justify-content: space-between;
     margin-top: auto;
-
   }
 
   &__price {
@@ -59,42 +58,21 @@
   }
 
   &__button {
-    background: #e43a3a;
     border: none;
     color: #fff;
     line-height: 35px;
     border-radius: 3px;
     font-weight: 400;
     font-size: 16px;
+    background: #e43a3a;
     padding: 0 25px;
     cursor: pointer;
     transition: 0.4s background;
 
-    &:hover {
-      background: #c43131;
+    &_select {
+      border: 1px solid #c43131;
+      color: #c43131;
+      background: none;
     }
-  }
-
-  &__calculator{
-    max-width: 85.38px;
-    width: 100%;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__minus,
-  &__plus{
-    border: none;
-    background: none;
-    font-size: 30px;
-    color: #000;
-    cursor: pointer;
-  }
-
-  &__counter{
-    font-size: 20px;
-    font-weight: bold;
   }
 }

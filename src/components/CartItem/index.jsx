@@ -1,52 +1,34 @@
 import React from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+
+import { addOne, removeFromCart, removeOne } from "../../redux/cart";
+
 import classes from "./CartItem.module.scss";
 
-const data = {
-  id: 8,
-  name: "Фила сарада",
-  image: "https://cdn.yaponamama.uz/products/thumbs/1_1596495569.jpg",
-  price: 65000,
-  text: "Рукола, сочная говядина терияки с грушей и нежнейшим творожным сыром филадельфия. Ингредиенты: Говядина терияки Рукола",
-  information: [
-    "Говядина терияки",
-    "Рукола",
-    "Помидоры черри",
-    "Консервированная груша",
-    "Сыр Филадельфия",
-    "Бальзамический крем",
-    "Бальзамический уксус",
-    "Лимонный фреш",
-    "Оливковое масло",
-    "Специи",
-  ],
-  category: "salad",
-};
-
-const CartItem = () => {
+const CartItem = ({ id, image, name, price, quantity }) => {
+  const dispatch = useDispatch();
+  const handlePlus = () => dispatch(addOne(id));
+  const handleMinus = () => dispatch(removeOne(id));
+  const handleClear = () => dispatch(removeFromCart(id));
   return (
     <div className={classes["cart"]}>
-      <img
-        className={classes["cart__image"]}
-        src={data.image}
-        alt={data.name}
-      />
-      <div className={classes["cart__content"]}>
-        <h5 className={classes["cart__name"]}>{data.name}</h5>
-        <p className={classes["cart__text"]}>{data.text}</p>
-        <div className={classes["cart__info"]}>
-          <p className={classes["cart__price"]}>{data.price} сум</p>
-          <div className={classes["cart__controller"]}>
-            <button className={classes["cart__minus"]}>
-              <AiOutlineMinus />
-            </button>
-            <p className={classes["cart__count"]}>100</p>
-            <button className={classes["cart__plus"]}>
-              <AiOutlinePlus />
-            </button>
-          </div>
-        </div>
+      <img className={classes["cart__image"]} src={image} alt={name} />
+      <h5 className={classes["cart__name"]}>{name}</h5>
+      <div className={classes["cart__controller"]}>
+        <button onClick={handleMinus} className={classes["cart__minus"]}>
+          <AiOutlineMinus />
+        </button>
+        <p className={classes["cart__count"]}>{quantity}</p>
+        <button onClick={handlePlus} className={classes["cart__plus"]}>
+          <AiOutlinePlus />
+        </button>
       </div>
+      <p className={classes["cart__price"]}>{price} сум</p>
+      <button className={classes["cart__trash"]} onClick={handleClear}>
+        <FaRegTrashAlt />
+      </button>
     </div>
   );
 };

@@ -1,18 +1,17 @@
 .swiper {
-  --swiper-theme-color: #e43a3a;
+  --swiper-theme-color: #fff;
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-bullet-inactive-opacity: 0.6;
-  &-pagination{
-    &-bullet{
+  &-pagination {
+    &-bullet {
       width: 30px;
-        height: 3px;
-        border-radius: 0;
-      &-active{
+      height: 3px;
+      border-radius: 0;
+      &-active {
         width: 30px;
         height: 3px;
         border-radius: 0;
       }
     }
-    
   }
 }

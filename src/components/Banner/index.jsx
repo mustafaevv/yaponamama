@@ -4,7 +4,6 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import sliderItem from "./bannerItem";
-import Container from "../../layout/Container";
 
 import "swiper/css";
 import "swiper/css/navigation";
