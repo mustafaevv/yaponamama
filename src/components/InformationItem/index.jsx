@@ -9,14 +9,20 @@ import classes from "./InformationItem.module.scss";
 const InformationItem = ({ data }) => {
   const dispatch = useDispatch();
   const [select, setSelect] = useState(false);
-  const handleClick = () => { 
+
+  const handleClick = () => {
     dispatch(!select ? addToCart(data) : removeFromCart(data.id));
     setSelect((state) => !state);
   };
+  console.log(data.id);
   return (
     <div className={classes["cart"]}>
       <div className={classes["cart__left"]}>
-        <img className={classes["cart__image"]} src={data.image} alt={data.name} />
+        <img
+          className={classes["cart__image"]}
+          src={data.image}
+          alt={data.name}
+        />
       </div>
       <div className={classes["cart__right"]}>
         <h2 className={classes["cart__name"]}>{data.name}</h2>

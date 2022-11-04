@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FiUser } from "react-icons/fi";
-import { BiShoppingBag, BiSearch } from "react-icons/bi";
+import { BiShoppingBag } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -20,16 +18,6 @@ const HeaderLink = styled.ul`
   gap: 2em;
   & li a {
     color: #000;
-  }
-`;
-
-const HeaderButton = styled.button`
-  border: none;
-  background: none;
-  cursor: pointer;
-  & svg {
-    width: 35px;
-    height: 30px;
   }
 `;
 

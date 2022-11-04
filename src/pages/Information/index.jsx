@@ -22,18 +22,21 @@ const Back = styled.a`
   }
 `;
 
+const api = "https://63071da7c0d0f2b8012710af.mockapi.io/";
+
 const Information = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`http://localhost:4000/products?id=${id}`);
+      const data = await fetch(`${api}/yaponamama?id=${id}`);
       const cards = await data.json();
       setData(cards);
     };
     fetchData();
   }, [id]);
+
   return (
     <Section>
       <Container>

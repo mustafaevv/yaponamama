@@ -4,14 +4,12 @@ import classNames from "classnames";
 
 import { addToCart, removeFromCart } from "../../redux/cart";
 
-import classes from "./Product.module.scss";
+import classes from "./Product.module.scss"; 
 
 const Product = ({ data, select }) => {
   const dispatch = useDispatch();
 
-  const handleSelect = () => {
-    dispatch(!select ? addToCart(data) : removeFromCart(data.id));
-  };
+  const handleSelect = () => dispatch(!select ? addToCart(data) : removeFromCart(data.id));
 
   return (
     <div className={classes["product"]}>

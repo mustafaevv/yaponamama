@@ -13,7 +13,7 @@ const Cards = styled.div`
   align-items: center;
   flex-wrap: wrap;
 `;
-const api = 'https://63071da7c0d0f2b8012710af.mockapi.io/yaponamama'
+const api = "https://63071da7c0d0f2b8012710af.mockapi.io/";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -21,13 +21,13 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(api);
+      const data = await fetch(`${api}/yaponamama`);
       const cards = await data.json();
       setData(cards);
     };
     fetchData();
   }, []);
-  console.log(process.env.REACT_APP_API_URL);
+
   return (
     <section>
       <Banner />

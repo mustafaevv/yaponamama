@@ -32,20 +32,18 @@ const Title = styled.h1`
   }
 `;
 
-const api = 'https://63071da7c0d0f2b8012710af.mockapi.io/yaponamama'
+const api = "https://63071da7c0d0f2b8012710af.mockapi.io/";
 
 const Category = () => {
   const [data, setData] = useState(null);
   const { type } = useParams();
-  const {pathname} = useLocation()
+  const { pathname } = useLocation();
   const { cart: cartItem } = useSelector((state) => state);
-  const {name} = navLinkItems.find((item)=> item.link === pathname)
-  
+  const { name } = navLinkItems.find((item) => item.link === pathname);
+
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(
-        `${api}?category=${type}`
-      );
+      const data = await fetch(`${api}/yaponamama?category=${type}`);
       const cards = await data.json();
       setData(cards);
     };
