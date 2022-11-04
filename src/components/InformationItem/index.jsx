@@ -14,7 +14,6 @@ const InformationItem = ({ data }) => {
     dispatch(!select ? addToCart(data) : removeFromCart(data.id));
     setSelect((state) => !state);
   };
-  console.log(data.id);
   return (
     <div className={classes["cart"]}>
       <div className={classes["cart__left"]}>
